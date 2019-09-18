@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Organization_abilympics
 {
-    public partial class Меню_специалиста : Form
+    public partial class SpecialistMenu : Form
     {
-        public Меню_специалиста()
+        public SpecialistMenu()
         {
             InitializeComponent();
+        }
+
+        private void Меню_специалиста_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dbDataSet.Orders". При необходимости она может быть перемещена или удалена.
+            this.ordersTableAdapter.Fill(this.dbDataSet.Orders);
+
         }
     }
 }

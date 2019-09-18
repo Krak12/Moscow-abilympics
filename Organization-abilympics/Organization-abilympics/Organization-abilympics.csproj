@@ -46,6 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewOrder.Designer.cs">
+      <DependentUpon>CreateNewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreatorProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatorProfile.Designer.cs">
+      <DependentUpon>CreatorProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
     <Compile Include="dbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,8 +84,14 @@
     <Compile Include="SpecialistMenu.Designer.cs">
       <DependentUpon>SpecialistMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreateNewOrder.resx">
+      <DependentUpon>CreateNewOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreatorMenu.resx">
       <DependentUpon>CreatorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatorProfile.resx">
+      <DependentUpon>CreatorProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
