@@ -19,7 +19,7 @@ namespace Organization_abilympics
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            //создание ввода логина
+            //создание ввода логина и пароля
             var userTA = new dbDataSetTableAdapters.WorkersTableAdapter();
             var users = userTA.GetDataByLoginAndPass(textBox1.Text, textBox2.Text);
 
@@ -28,6 +28,7 @@ namespace Organization_abilympics
                 MessageBox.Show("Неверный логин или пароль!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            //переходы по разным формам
             Data.UserAutorized = userTA.GetDataByLogin(textBox1.Text.Trim()).First();
 
             if (Data.UserAutorized.TypeAccount == 1)
@@ -65,9 +66,10 @@ namespace Organization_abilympics
             }
         }
 
+        //функция показа пароля
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
-            textBox2.UseSystemPasswordChar != checkBox1.Checked;
+            textBox2.UseSystemPasswordChar = !checkBox1.Checked;
         }
 
         private void Main_Load(object sender, EventArgs e)
